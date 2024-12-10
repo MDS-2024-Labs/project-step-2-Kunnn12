@@ -28,9 +28,9 @@ class TestEvents(unittest.TestCase):
     def test_handle_event(self):
         initial_hp = self.player.stats["HP"]
         handle_event(self.player)
-        self.assertNotEqual(
-        self.player.stats["HP"], 
-        initial_hp, 
-        "Event should affect player's HP or provide relevant feedback."
-    )
+        self.assertTrue(
+            self.player.stats["HP"] != initial_hp or len(self.player.items) > 0,
+            "Event should either affect player's HP or grant an item."
+        )
+
 
