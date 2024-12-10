@@ -96,3 +96,21 @@ def start_combat(player, npc):
     # Determine and Display Result
     winner = player.name if player.stats["HP"] > 0 else npc.name
     display_last_message(f"The winner is {winner}!")
+
+def take_damage(self, damage):
+    """
+    Reduces the character's HP by the specified damage amount.
+
+    Ensures that the HP does not drop below 0 and that it remains an integer.
+
+    Args:
+        damage (int or float): The amount of damage to apply.
+
+    Modifies:
+        self.stats["HP"]: Decrements the character's HP by the damage value.
+    """
+    self.stats["HP"] -= damage
+    self.stats["HP"] = max(0, round(self.stats["HP"]))  # Round to the nearest integer and ensure non-negative
+
+
+
