@@ -5,6 +5,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from Gameplay.interface import display_stats
+from Gameplay.interface import display_visual_health_bar
 from Character.player import Player
 
 class TestInterface(unittest.TestCase):
@@ -46,4 +47,5 @@ class TestInterface(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
 
