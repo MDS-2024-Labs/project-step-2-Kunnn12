@@ -46,7 +46,6 @@ class TestNPC(unittest.TestCase):
                 attack_choice_list.append(attack["attack_type"])
             else:
                 pass
-            print(attack_choice_list)
 
     def test_taunt_player(self):
         taunt = self.npc.taunt_player()
