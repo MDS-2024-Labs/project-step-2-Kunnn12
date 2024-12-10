@@ -24,6 +24,10 @@ class TestNPC(unittest.TestCase):
     def test_initialization(self):
         self.assertEqual(self.npc.name, "Enemy")
         self.assertIn(self.npc.characteristic, ["gentle", "rude", "neutral"])
+        self.assertIn("HP", self.npc.stats)
+        self.assertIn("ATK", self.npc.stats)
+        self.assertIn("CRIT", self.npc.stats)
+        self.assertIn("DODGE", self.npc.stats)
 
     def test_choose_attack(self):
         attack_choice_list = []
@@ -51,5 +55,10 @@ class TestNPC(unittest.TestCase):
         taunt = self.npc.taunt_player()
         self.assertIsInstance(taunt, str)
         self.assertGreater(len(taunt), 0)
-
+        # Check if the taunt contains expected phrases based on the NPC's characteristic
+        self.assertTrue(any(word in taunt for word in ["defeat", "crush", "challenge"]))  # Random words expected in the taunt
+        
+        # Ensure the taunt matches one of the example rude taunts (if characteristic is "rude")
+        self.assertTrue(taunt in ["You think you can defeat me?", "Prepare to lose!", "Is that all you've got?", 
+                                "I'll crush you like an insect!", "You're pathetic, even for a challenge!"])
 

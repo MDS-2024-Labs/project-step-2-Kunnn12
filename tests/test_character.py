@@ -39,12 +39,33 @@ class TestCharacter(unittest.TestCase):
         initial_hp = self.character.stats["HP"]
         self.character.take_damage(20)
         self.assertEqual(self.character.stats["HP"], max(0, initial_hp - 20))
+        initial_hp = self.character.stats["HP"]
+        self.character.take_damage(10)
+        self.assertEqual(self.character.stats["HP"], max(0, initial_hp - 10))
+        initial_hp = self.character.stats["HP"]
+        self.character.take_damage(0)
+        self.assertEqual(self.character.stats["HP"], initial_hp)
+        initial_hp = self.character.stats["HP"]
+        self.character.take_damage(1000)
+        self.assertEqual(self.character.stats["HP"], max(0, initial_hp - 1000))
 
     def test_dodge_attack(self):
         result = self.character.dodge_attack(10)
         self.assertIn(result, [True, False])  # Random result
+        result = self.character.dodge_attack(0)
+        self.assertIn(result, [True, False])  # Random result
+        result = self.character.dodge_attack(-10)
+        self.assertIn(result, [True, False])  # Random result
+        dodge_chance = self.character.stats["DODGE"]
+        self.assertTrue(0 <= dodge_chance <= 100)
+
 
     def test_critical_attack(self):
         result = self.character.critical_attack(10)
         self.assertIn(result, [True, False])  # Random result
-
+        result = self.character.critical_attack(0)
+        self.assertIn(result, [True, False])  # Random result
+        result = self.character.critical_attack(-10)
+        self.assertIn(result, [True, False])  # Random result
+        crit_chance = self.character.stats["CRIT"]  # Crit stat value
+        self.assertTrue(0 <= crit_chance <= 100)  # Ensure the crit chance is within the range of 0 and 100.

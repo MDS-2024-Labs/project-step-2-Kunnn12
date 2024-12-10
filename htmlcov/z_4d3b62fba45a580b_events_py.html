@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for Gameplay\events.py: 42%</title>
+    <title>Coverage for Gameplay\events.py: 38%</title>
     <link rel="icon" sizes="32x32" href="favicon_32_cb_58284776.png">
     <link rel="stylesheet" href="style_cb_718ce007.css" type="text/css">
     <script src="coverage_html_cb_497bf287.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>Gameplay\events.py</b>:
-            <span class="pc_cov">42%</span>
+            <span class="pc_cov">38%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -55,8 +55,8 @@
         </aside>
         <h2>
             <span class="text">66 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">28<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">38<span class="text"> missing</span></button>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">25<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">41<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_4d3b62fba45a580b_interface_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.8">coverage.py v7.6.8</a>,
-            created at 2024-12-09 23:05 -0800
+            created at 2024-12-09 23:50 -0800
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -183,9 +183,9 @@
     <p class="run"><span class="n"><a id="t101" href="#t101">101</a></span><span class="t">        <span class="nam">item</span> <span class="op">=</span> <span class="op">{</span><span class="str">"name"</span><span class="op">:</span> <span class="str">"Cursed Relic"</span><span class="op">,</span> <span class="str">"effect"</span><span class="op">:</span> <span class="op">{</span><span class="str">"HP"</span><span class="op">:</span> <span class="op">-</span><span class="num">15</span><span class="op">,</span> <span class="str">"ATK"</span><span class="op">:</span> <span class="op">-</span><span class="num">5</span><span class="op">,</span> <span class="op">**</span><span class="nam">base_effects</span><span class="op">}</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t102" href="#t102">102</a></span><span class="t">        <span class="nam">apply_item_effect</span><span class="op">(</span><span class="nam">player</span><span class="op">,</span> <span class="nam">item</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t103" href="#t103">103</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t104" href="#t104">104</a></span><span class="t">    <span class="key">elif</span> <span class="nam">event</span> <span class="op">==</span> <span class="str">"Treasure Found"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t105" href="#t105">105</a></span><span class="t">        <span class="nam">item</span> <span class="op">=</span> <span class="op">{</span><span class="str">"name"</span><span class="op">:</span> <span class="str">"Gold Coins"</span><span class="op">,</span> <span class="str">"effect"</span><span class="op">:</span> <span class="op">{</span><span class="str">"HP"</span><span class="op">:</span> <span class="num">10</span><span class="op">,</span> <span class="op">**</span><span class="nam">base_effects</span><span class="op">}</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t106" href="#t106">106</a></span><span class="t">        <span class="nam">apply_item_effect</span><span class="op">(</span><span class="nam">player</span><span class="op">,</span> <span class="nam">item</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t104" href="#t104">104</a></span><span class="t">    <span class="key">elif</span> <span class="nam">event</span> <span class="op">==</span> <span class="str">"Treasure Found"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t105" href="#t105">105</a></span><span class="t">        <span class="nam">item</span> <span class="op">=</span> <span class="op">{</span><span class="str">"name"</span><span class="op">:</span> <span class="str">"Gold Coins"</span><span class="op">,</span> <span class="str">"effect"</span><span class="op">:</span> <span class="op">{</span><span class="str">"HP"</span><span class="op">:</span> <span class="num">10</span><span class="op">,</span> <span class="op">**</span><span class="nam">base_effects</span><span class="op">}</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t106" href="#t106">106</a></span><span class="t">        <span class="nam">apply_item_effect</span><span class="op">(</span><span class="nam">player</span><span class="op">,</span> <span class="nam">item</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t107" href="#t107">107</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t108" href="#t108">108</a></span><span class="t">    <span class="key">elif</span> <span class="nam">event</span> <span class="op">==</span> <span class="str">"Wandering Spirit"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t109" href="#t109">109</a></span><span class="t">        <span class="nam">choice</span> <span class="op">=</span> <span class="nam">input</span><span class="op">(</span><span class="str">"A wandering spirit offers you power at a cost. Do you accept its gift? (yes/no): "</span><span class="op">)</span><span class="op">.</span><span class="nam">strip</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">lower</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -211,7 +211,7 @@
             <a class="nav" href="z_4d3b62fba45a580b_interface_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.8">coverage.py v7.6.8</a>,
-            created at 2024-12-09 23:05 -0800
+            created at 2024-12-09 23:50 -0800
         </p>
     </div>
 </footer>
